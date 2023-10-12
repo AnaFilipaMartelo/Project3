@@ -69,5 +69,8 @@ def collect_sentiment_data(tickers, time_period):
             # (since after 7 minutes running it would olverload the API)  
             if x%365==0:
                 time.sleep(30)
+            # Put to sleep extra 120 sec after retrieving almost 10 years of data
+            if x%3640==0:
+                time.sleep(120)
           
     return news_df

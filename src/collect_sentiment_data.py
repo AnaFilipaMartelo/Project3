@@ -7,7 +7,7 @@ import time
 
 def collect_sentiment_data(tickers, time_period):
     """
-    Retriece news data for a list of tickers in a defined time period.
+    Retrieve news data for a list of tickers in a defined time period.
 
     Args:
         tickers (list): List of tickers that we want to collect data.
@@ -28,6 +28,8 @@ def collect_sentiment_data(tickers, time_period):
     # Define the date range (start and end dates) 
     start_date, end_date = time_period
     date_format = "%Y-%m-%d"
+
+    # Convert the date type to 'datetime' since it is a string type
     start_date = datetime.strptime(start_date, date_format)
     end_date = datetime.strptime(end_date, date_format)
 
@@ -60,14 +62,17 @@ def collect_sentiment_data(tickers, time_period):
         
             # Move to the next day
             current_date += timedelta(days=1)
-            # Increase the count of days the loop iterated
+
+            # Increment the day counter for every loop iteration
             x+=1
-            # Put the loop to sleep every 90 days 
+            # Sleep every 90 days to prevent API overloads 
             if x%90==0:
                 time.sleep(15)     
-            # Put the loop to sleep extra 30 sec after 1 year 
-            # (since after 7 minutes running it would olverload the API)  
+            # Sleep for an extra 30 seconds after 1 year of data retrieval 
             if x%365==0:
                 time.sleep(30)
+            # Sleep for an extra 2 minutes after retrieving almost 10 years of data
+            if x%3640==0:
+                time.sleep(120)
           
     return news_df

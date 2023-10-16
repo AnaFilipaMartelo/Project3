@@ -13,7 +13,7 @@ def calculate_technical_indicators(formatted_price_data, fast_window, slow_windo
         sentiment_summary (dict): A dictionary containing sentiment score summaries for each ticker.
 
     Returns:
-        DataFrame: A DataFrame containing calculated technical indicators and sentiment score summaries for each ticker.
+        DataFrame: A DataFrame containing calculated technical indicators and sentiment score sums for each ticker.
     """
     # Make a copy of the input data
     data = formatted_price_data.copy()
@@ -46,5 +46,5 @@ def calculate_technical_indicators(formatted_price_data, fast_window, slow_windo
 
     # Drop rows with NaN values due to rolling and EMA calculations
     data.dropna(inplace=True)
-    
+
     return data

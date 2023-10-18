@@ -56,7 +56,10 @@ While the primary objectives of this project have been accomplished, there are s
      - Model 2: Leverage sentiment analysis on entire financial news articles.
    This approach allows for a more in-depth examination of the impact of each component and provides insights into the relative importance of these factors in stock price trends.
 
-4. **Web-Based or Desktop Application**:
+4. **Trading Algorithm**:
+   - The successful performance of our regression model in predicting close prices opens up the possibility of implementing a trading strategy in the future. This could be a valuable next step to leverage the accurate predictions and turn them into actionable trading decisions.
+
+5. **Web-Based or Desktop Application**:
    - Extend the project's functionality, consider creating a user-friendly web-based or desktop application. This application could allow users to input stock symbols and receive trend predictions based on the models. Such an application would make the models accessible to a broader audience and enable real-time analysis of various stocks.
 
 These future development possibilities aim to enhance the project's accuracy, complexity, and usability, ensuring that it continues to evolve and provide valuable insights to users.
@@ -158,7 +161,7 @@ Read the exploratory analysis provided in the text section of the notebook.
 
 Next, run the following code to calculate technical indicators (slow SMA, fast SMA, EMA, RSI) for each ticker and build a Linear Regression machine learning model. Calculate regression metrics to evaluate the model's performance.
 
-When plotting the actual vs. predicted values for the Linear Regression model, you observe a close alignment between the data points and the regression line, indicating strong predictive accuracy.
+When plotting the actual vs. predicted values for the Linear Regression model, we observe a close alignment between the data points and the regression line, indicating strong predictive accuracy.
 
 <img src="Images/AMT_Actual_Predicted_lr.png" alt= "AMT Atual vs Predicted Close Price- Linear Regression Model" width="800" height="400">
 

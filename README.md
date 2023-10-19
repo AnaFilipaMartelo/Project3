@@ -28,7 +28,7 @@ This project aimed to develop a machine learning model for predicting stock pric
 
 
 4. **Model Selection**:
-   - Chose machine learning models for stock price prediction, a Linear Regression model and a RandomForestRegressor model.
+   - Selected machine learning models for stock price prediction: Linear Regression and RandomForestRegressor.
 
 5. **Model Training and Evaluation**:
    - Split the data into training and testing sets.
@@ -165,9 +165,9 @@ When plotting the actual vs. predicted values for the Linear Regression model, w
 
 <img src="Images/AMT_Actual_Predicted_lr.png" alt= "AMT Atual vs Predicted Close Price- Linear Regression Model" width="800" height="400">
 
-Afterward, build the Random Forest machine learning model and calculate the regression metrics to evaluate its performance.
+Afterward, build the RandomForestRegressor machine learning model and calculate the regression metrics to evaluate its performance.
 
-When plotting the actual vs. predicted values for the Random Forest Regressor model, you notice a significant deviation of data points from the ideal linear trend, highlighting poor predictive accuracy. 
+When plotting the actual vs. predicted values for the RandomForestRegressor model, you notice a significant deviation of data points from the ideal linear trend, highlighting poor predictive accuracy. 
 
 <img src="Images/AMT_Actual_Predicted_rf.png" alt= "AMT Atual vs Predicted Close Price- Linear Regression Model" width="800" height="400">
 
